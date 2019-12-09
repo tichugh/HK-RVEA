@@ -1,5 +1,5 @@
 % This is K-RVEA 
-function [off,Empty_ref_old] = evolve_K_RVEA(model_ex,model_nex,Archive,Boundary,Empty_ref_old,id_ex,id_nex,Problem)
+function [off,Empty_ref_old] = evolve_K_RVEA(model_ex,model_nex,Archive,Boundary,Empty_ref_old,id_ex,id_nex)
 no_var = size(Boundary,2);
 Population = Archive(:,1:no_var);
 FunctionValue = Archive(:,no_var+1:end);
@@ -7,7 +7,7 @@ FunctionValue = Archive(:,no_var+1:end);
 maxFE = 20000;
 Coding = 'Real';
 
-Vs = ref_vectors(2,Problem); % Generation of reference vectors
+Vs = ref_vectors(2); % Generation of reference vectors
 V = Vs;
 
 N = size(V,1);

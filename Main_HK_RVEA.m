@@ -66,7 +66,7 @@ while (FE_ex < Max_FE_ex || FE_nex < Max_FE_nex)
   
     %% Step 6: Run some surrogate-assisted algorithm e.g. K-RVEA to find the samples to be evaluated
 
-    P = run_K_RVEA(Problem,model_ex,model_nex,Bounds,A,id_ex,id_nex,empty_ref);
+    P = run_K_RVEA(model_ex,model_nex,Bounds,A,id_ex,id_nex,empty_ref);
 
     itr_count = itr_count + 1;
  
